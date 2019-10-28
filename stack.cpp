@@ -1,45 +1,45 @@
 #include <iostream>
 using namespace std; 
-int stack[100], n=100, top=-1;
-void push(int val) {
-   if(top>=n-1)
-      cout<<"Stack Overflow"<<endl; 
+int stack[100], m=100, n=-1;
+void p(int mn) {
+   if(n>=m-1)
+      cout<<"Stackshi shesatani elementebi"<<endl; 
    else {
-      top++;
-      stack[top]=val;
+      n++;
+      stack[n]=mn;
    }
 }
 void pop() {
-   if(top<=-1)
-      cout<<"Stack Underflow"<<endl;
+   if(n<=-1)
+      cout<<"Stackidan gamosatani elementebi"<<endl;
    else {
-      cout<<"The popped element is "<< stack[top] <<endl;
-      top--;
+      cout<<"elementebia"<< stack[n] <<endl;
+      n--;
    }
 }
 void display() {
-   if(top>=0) {
-      cout<<"Stack elements are:";
-      for(int i=top; i>=0; i--)
+   if(n>=0) {
+      cout<<"stekis elementebia:";
+      for(int i=n; i>=0; i--)
          cout<<stack[i]<<" ";
          cout<<endl;
    } else
-      cout<<"Stack is empty";
+      cout<<"carielia";
 }
 int main() {
-   int ch, val; 
-   cout<<"1) Push in stack"<<endl;
-   cout<<"2) Pop from stack"<<endl;
-   cout<<"3) Display stack"<<endl;
-   cout<<"4) Exit"<<endl;
+   int ch, mn; 
+   cout<<"1 stackis dawyeba"<<endl;
+   cout<<"2 stackis elementebi"<<endl;
+   cout<<"3 stackis gamotana ekranze"<<endl;
+   cout<<"4 Exit"<<endl;
    do {
-      cout<<"Enter choice: "<<endl;
+      cout<<"airchiet: "<<endl;
       cin>>ch;
       switch(ch) {
          case 1: {   
-            cout<<"Enter value to be pushed:"<<endl;
-            cin>>val;
-            push(val);
+            cout<<"sheiyvanet sawyisi mnishvneloba:"<<endl;
+            cin>>mn;
+            p(mn);
             break;
          }
          case 2: {
@@ -55,7 +55,7 @@ int main() {
             break;
          }
          default: {
-            cout<<"Invalid Choice"<<endl;
+            cout<<"araswori archevani"<<endl;
          }
       }
    }while(ch!=4); 
